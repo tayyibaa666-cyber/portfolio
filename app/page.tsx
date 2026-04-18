@@ -195,7 +195,7 @@ export default function HomePage() {
               <div className="hero-buttons">
                 <a href="#portfolio" className="btn btn-solid">View My Work</a>
                 <a href="#contact" className="btn btn-outline">Get in Touch</a>
-                <a href="/TayybaAbid_Resume 1.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-outline">View CV</a>
+                <a href="/TayybaAbid_Resume1.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-outline">View CV</a>
               </div>
             </div>
             <div className="hero-visual reveal">
