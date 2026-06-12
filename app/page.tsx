@@ -192,7 +192,7 @@ export default function HomePage() {
               <div className="hero-actions">
                 <a href="#portfolio" className="btn btn-solid">View My Work</a>
                 <a href="#contact" className="btn btn-outline">Get in Touch</a>
-                <a href="/TayybaAbid_Resume.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
+                <a href="/TayybaAbid_Resume1.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
                   View CV
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M7 17L17 7M7 7h10v10" />
