@@ -222,28 +222,71 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right: Photo */}
+            {/* Right: New Card-Style Photo Frame */}
             <div className="hero-visual reveal reveal-delay-2">
               <div className="hero-photo-frame">
+
+                {/* Outer glowing border */}
                 <div className="hero-photo-border" />
+
+                {/* Inner photo container */}
                 <div className="hero-photo-inner">
-                  <img src="/tayyba.jpeg" alt="Tayyba Abid" className="hero-photo" />
+
+                  {/* The photo */}
+                  <img
+                    src="/tayyba.jpeg"
+                    alt="Tayyba Abid"
+                    className="hero-photo"
+                    onError={(e) => {
+                      e.currentTarget.style.display = "none";
+                      const parent = e.currentTarget.parentElement;
+                      if (parent) parent.style.background = "linear-gradient(155deg,#0d1117 0%,#1a2332 60%,#0f2233 100%)";
+                    }}
+                  />
+
+                  {/* Bottom gradient overlay for text legibility */}
+                  <div className="hero-photo-overlay" />
+
+                  {/* "Open to Freelance" badge — top right */}
+                  <div className="hero-photo-badge">
+                    <span className="hero-badge-dot" />
+                    Open to Freelance
+                  </div>
+
+                  {/* Scroll hint button — mid right */}
+                  <a href="#about" className="hero-photo-scroll" aria-label="Scroll down">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 5v14M5 12l7 7 7-7" />
+                    </svg>
+                  </a>
+
+                  {/* Role bar — bottom overlay */}
+                  <div className="hero-photo-role">
+                    <div className="hero-photo-role-icon">
+                      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#00D4FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="16 18 22 12 16 6" />
+                        <polyline points="8 6 2 12 8 18" />
+                      </svg>
+                    </div>
+                    <div className="hero-photo-role-title">
+                      AI &amp; <br /><span className="accent">Web</span> Developer
+                    </div>
+                    <div className="hero-photo-role-sub">
+                      Building intelligent, scalable and<br />user-focused digital solutions.
+                    </div>
+                  </div>
+
                 </div>
+
+                {/* Corner accent brackets */}
                 <div className="hero-photo-corner tl" />
                 <div className="hero-photo-corner tr" />
                 <div className="hero-photo-corner bl" />
                 <div className="hero-photo-corner br" />
 
-                <div className="hero-stat-card left">
-                  <div className="hero-stat-num">3+</div>
-                  <div className="hero-stat-label">Years Coding</div>
-                </div>
-                <div className="hero-stat-card right">
-                  <div className="hero-stat-num">10+</div>
-                  <div className="hero-stat-label">Projects Built</div>
-                </div>
               </div>
             </div>
+
           </div>
         </section>
 
@@ -273,7 +316,7 @@ export default function HomePage() {
                     <p className="skill-category-label">Languages</p>
                     <div className="pills">
                       {["Python", "JavaScript", "R", "HTML", "CSS", "SQL"].map(s => (
-                        <span key={s} className="pill pill-purple">{s}</span>
+                        <span key={s} className="pill">{s}</span>
                       ))}
                     </div>
                   </div>
@@ -281,7 +324,7 @@ export default function HomePage() {
                     <p className="skill-category-label">Frameworks &amp; Backend</p>
                     <div className="pills">
                       {["Django", "FastAPI", "Bootstrap", "Tailwind CSS", "Streamlit"].map(s => (
-                        <span key={s} className="pill pill-teal">{s}</span>
+                        <span key={s} className="pill">{s}</span>
                       ))}
                     </div>
                   </div>
@@ -289,7 +332,7 @@ export default function HomePage() {
                     <p className="skill-category-label">AI &amp; ML</p>
                     <div className="pills">
                       {["RAG", "LangChain", "Prompt Engineering", "Fine-tuning", "NLP", "Vector DB", "LLMs"].map(s => (
-                        <span key={s} className="pill pill-coral">{s}</span>
+                        <span key={s} className="pill">{s}</span>
                       ))}
                     </div>
                   </div>
@@ -297,7 +340,7 @@ export default function HomePage() {
                     <p className="skill-category-label">Tools &amp; Platforms</p>
                     <div className="pills">
                       {["WordPress", "Git", "REST APIs", "Docker", "VS Code"].map(s => (
-                        <span key={s} className="pill pill-blue">{s}</span>
+                        <span key={s} className="pill">{s}</span>
                       ))}
                     </div>
                   </div>
